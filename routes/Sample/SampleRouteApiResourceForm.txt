@@ -1,0 +1,7 @@
+Route::name('item.')->prefix('item')->group(function () {
+    Route::get('sample/category', [SampleController::class, 'category'])->name('sample.category');
+    Route::post('sample/store-and-send-mail', [SampleController::class, 'storeAndSendMail'])->name('sample.store-and-send-mail');
+    Route::apiResources([
+        'sample_url' => SampleController::class,
+    ]);
+});

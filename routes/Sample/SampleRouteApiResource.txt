@@ -1,0 +1,6 @@
+Route::name('item.')->prefix('item')->group(function () {
+    Route::get('sample_url/category', [SampleController::class, 'category'])->name('sample_url.category');
+    Route::apiResources([
+        'sample_url' => SampleController::class,
+    ]);
+});
